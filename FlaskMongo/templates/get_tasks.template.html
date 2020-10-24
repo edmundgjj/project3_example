@@ -1,0 +1,29 @@
+{%extends 'base.template.html' %}
+
+{% block pagetitle %}
+AnyTasks - My Tasks
+{% endblock%}
+
+{%block content%}
+<h1>See all your tasks</h1>
+
+<table class="table table-striped table-hover">
+<thead>
+    <th scope="col">Task Name</th>
+    <th scope="col">Edit</th>
+</thead>
+<tbody>
+{% for task in task %}
+<tr>
+<td>
+{{task.task_name}}
+</td>
+<td>
+<input type="button" value="edit">
+</td>
+</tr>
+{% endfor %}
+<tbody>
+</table>
+
+{%endblock%}
